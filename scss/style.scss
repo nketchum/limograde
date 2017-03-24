@@ -6,3 +6,62 @@
 
 // Base-theme overrides.
 @import 'overrides';
+
+
+article.company.full {
+  .group {
+    float: left;
+    margin: 0 1% 1% 0;
+    width: 49.5%;
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+  }
+}
+
+.tabs--primary {
+  margin-bottom: 1em;
+}
+
+.node-form {
+  margin-bottom: 2em;
+}
+
+.file--image {
+  display: none;
+}
+
+.form-required:after {
+  background-repeat: no-repeat;
+  height: 10px;
+  margin-left: 0.2em;
+}
+
+.form-type-managed-file,
+.form-type-url {
+  .description {
+    display: none;
+  }
+}
+
+.field--type-text-with-summary {
+  .filter-wrapper {
+    display: none;
+  }
+}
+
+.js-form-type-tel label {
+  display: block;
+  margin-bottom: 5px !important;
+}
+
+.field--widget-image-image,
+.field--widget-inline-entity-form-complex {
+  thead,
+  .tabledrag-toggle-weight {
+    display: none;
+  }
+  .table>tbody>tr:first-child>td {
+    border-top: none;
+  }
+}
