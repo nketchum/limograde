@@ -1,0 +1,5 @@
+# Schema for the theme setting configuration file of the limograde theme.
+
+limograde.settings:
+  type: theme_settings
+  label: 'limograde settings'
