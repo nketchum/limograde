@@ -51,9 +51,14 @@ article.company.full {
   }
 }
 
-.js-form-type-tel label {
-  display: block;
-  margin-bottom: 5px !important;
+.js-form-type-tel {
+  .control-label {
+    display: block;
+    margin-bottom: 5px !important;
+  }
+  .form-control {
+    width: 100% !important;
+  }
 }
 
 .field--widget-image-image,
