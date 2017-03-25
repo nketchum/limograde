@@ -40,7 +40,7 @@ gulp.task('sass', function () {
       browsers: ['last 2 version']
     }))
     .pipe(stripCssComments({preserve: false}))
-    .pipe(cssmin())
+    // .pipe(cssmin())
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./css'));
 });
