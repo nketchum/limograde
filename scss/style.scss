@@ -1,5 +1,6 @@
 // Default variables.
 @import "default-variables";
+@import '../node_modules/breakpoint-sass/stylesheets/breakpoint';
 
 // Bootstrap Framework.
 @import '../bootstrap/assets/stylesheets/bootstrap';
@@ -65,3 +66,30 @@ article.company.full {
     border-top: none;
   }
 }
+
+@include breakpoint(min-width 960px) {
+
+  .node-form>div {
+    float: left;
+    margin-right: 25px;
+    width: calc(50% - 25px);
+  }
+
+  .node-form>.field--type-language {
+    margin-bottom: 0 !important;
+  }
+
+  .node-form>.form-actions,
+  .node-form>.form-type-vertical-tabs  {
+    clear: both;
+    float: none;
+    width: 100%;
+    &:after {
+      clear: both;
+      content: "";
+      display: table;
+    }
+  }
+
+}
+
