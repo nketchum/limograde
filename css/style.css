@@ -6242,6 +6242,9 @@ p:last-child,
 .node-form > .field--type-language {
   margin-bottom: 0 !important; }
 
+.form-group {
+  margin-bottom: 20px; }
+
 .file--image {
   display: none; }
 
@@ -6327,8 +6330,9 @@ p:last-child,
 @media (min-width: 960px) {
   .node-form > div {
     float: left;
-    margin-right: 25px;
-    width: calc(50% - 25px); }
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(50% - 20px); }
   .node-form > .form-actions,
   .node-form > .form-type-vertical-tabs {
     clear: both;

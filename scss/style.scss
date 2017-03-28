@@ -20,6 +20,10 @@
   margin-bottom: 0 !important;
 }
 
+.form-group {
+  margin-bottom: 20px;
+}
+
 .file--image {
   display: none;
 }
@@ -126,8 +130,9 @@
 
   .node-form>div {
     float: left;
-    margin-right: 25px;
-    width: calc(50% - 25px);
+    margin-left: 10px;
+    margin-right: 10px;
+    width: calc(50% - 20px);
   }
 
   .node-form>.form-actions,
