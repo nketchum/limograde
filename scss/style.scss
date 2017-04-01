@@ -8,7 +8,14 @@
 // Base-theme overrides.
 @import 'overrides';
 
+.navbar-brand {
+  padding-top: 15px;
+}
+
 .navbar-default {
+  border-left: none;
+  border-radius: 0;
+  border-right: none;
   clear: both;
 }
 
@@ -185,4 +192,10 @@
     border: 1px solid #e3e3e3;
     padding: 1em;
     margin: 1em 0 0 0;
+}
+
+.region-footer {
+  ul.menu li {
+    display: inline-block;
+  }
 }
