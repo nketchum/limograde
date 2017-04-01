@@ -6233,6 +6233,17 @@ p:last-child,
   .help-block:first-child, .control-group .help-inline:first-child {
     margin-top: 0; }
 
+.navbar-default {
+  clear: both; }
+
+.limograde-search-city {
+  display: inline-block; }
+  .limograde-search-city.default-hide {
+    display: none; }
+
+.views-exposed-form .button {
+  height: 34px; }
+
 .tabs--primary {
   margin-bottom: 1em; }
 

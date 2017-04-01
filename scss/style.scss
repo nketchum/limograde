@@ -8,6 +8,23 @@
 // Base-theme overrides.
 @import 'overrides';
 
+.navbar-default {
+  clear: both;
+}
+
+.limograde-search-city {
+  display: inline-block;
+  &.default-hide {
+    display: none;
+  }
+}
+
+.views-exposed-form {
+  .button {
+    height: 34px;
+  }
+}
+
 .tabs--primary {
   margin-bottom: 1em;
 }

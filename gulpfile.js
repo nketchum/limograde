@@ -25,9 +25,9 @@ var sass_config = {
 
 // Uglifies javascript
 gulp.task('uglify', function() {
-  return gulp.src('js/*.js')
+  return gulp.src('scripts/*.js')
     .pipe(uglify())
-    .pipe(gulp.dest('js_min'));
+    .pipe(gulp.dest('js'));
 });
 
 // Compiles sass
@@ -48,9 +48,9 @@ gulp.task('sass', function () {
 // Type "gulp" in the cli to watch
 gulp.task('default', function(){
   livereload.listen();
-    gulp.watch('./sass/**/*.scss', ['sass']);
+    gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch('./js/*.js', ['uglify']);
-    gulp.watch(['./css/style.css', './**/*.twig', './js_min/*.js'], function (files){
+    gulp.watch(['./css/style.css', './**/*.twig', './scripts/*.js'], function (files){
       livereload.changed(files)
     });
 });

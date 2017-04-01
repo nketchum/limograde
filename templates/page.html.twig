@@ -57,6 +57,15 @@
  */
 #}
 {% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Header #}
+{% if page.header %}
+  {% block header %}
+    <div class="col-sm-12" role="heading">
+      {{ page.header }}
+    </div>
+  {% endblock %}
+{% endif %}
+
 {# Navbar #}
 {% if page.navigation or page.navigation_collapsible %}
   {% block navbar %}
@@ -101,15 +110,6 @@
 {% block main %}
   <div role="main" class="main-container {{ container }} js-quickedit-main-content">
     <div class="row">
-
-      {# Header #}
-      {% if page.header %}
-        {% block header %}
-          <div class="col-sm-12" role="heading">
-            {{ page.header }}
-          </div>
-        {% endblock %}
-      {% endif %}
 
       {# Sidebar First #}
       {% if page.sidebar_first %}
