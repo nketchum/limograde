@@ -152,7 +152,8 @@
 
 @include breakpoint(min-width 960px) {
 
-  .node-form {
+  .node-form,
+  .node-company-edit-form {
     &>div {
       margin-left: 10px;
       margin-right: 10px;
