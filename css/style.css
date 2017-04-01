@@ -6242,7 +6242,8 @@ p:last-child,
     display: none; }
 
 .views-exposed-form .button {
-  height: 34px; }
+  height: 34px;
+  margin-left: 0.3em; }
 
 .tabs--primary {
   margin-bottom: 1em; }
