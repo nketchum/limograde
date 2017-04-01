@@ -152,14 +152,14 @@
 
 @include breakpoint(min-width 960px) {
 
-  .node-form,
-  .node-company-edit-form {
+  .node-form {
     &>div {
       margin-left: 10px;
       margin-right: 10px;
       width: calc(100% - 20px);
     }
-    &.node-company-form>div {
+    &.node-company-form>div,
+    &.node-company-edit-form>div {
       float: left;
       width: calc(50% - 20px);
     }

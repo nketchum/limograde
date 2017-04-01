@@ -6345,26 +6345,21 @@ p:last-child,
   border-top: none; }
 
 @media (min-width: 960px) {
-  .node-form > div,
-  .node-company-edit-form > div {
+  .node-form > div {
     margin-left: 10px;
     margin-right: 10px;
     width: calc(100% - 20px); }
   .node-form.node-company-form > div,
-  .node-company-edit-form.node-company-form > div {
+  .node-form.node-company-edit-form > div {
     float: left;
     width: calc(50% - 20px); }
   .node-form > .form-actions,
-  .node-form > .form-type-vertical-tabs,
-  .node-company-edit-form > .form-actions,
-  .node-company-edit-form > .form-type-vertical-tabs {
+  .node-form > .form-type-vertical-tabs {
     clear: both;
     float: none;
     width: 100%; }
     .node-form > .form-actions:after,
-    .node-form > .form-type-vertical-tabs:after,
-    .node-company-edit-form > .form-actions:after,
-    .node-company-edit-form > .form-type-vertical-tabs:after {
+    .node-form > .form-type-vertical-tabs:after {
       clear: both;
       content: "";
       display: table; }
