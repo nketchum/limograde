@@ -32,10 +32,9 @@
 
 .node-form {
   margin-bottom: 2em;
-}
-
-.node-form>.field--type-language {
-  margin-bottom: 0 !important;
+  &>.field--type-language {
+    margin-bottom: 0 !important;
+  }
 }
 
 .form-group {
@@ -146,22 +145,26 @@
 
 @include breakpoint(min-width 960px) {
 
-  .node-form>div {
-    float: left;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: calc(50% - 20px);
-  }
-
-  .node-form>.form-actions,
-  .node-form>.form-type-vertical-tabs  {
-    clear: both;
-    float: none;
-    width: 100%;
-    &:after {
+  .node-form {
+    &>div {
+      margin-left: 10px;
+      margin-right: 10px;
+      width: calc(100% - 20px);
+    }
+    &.node-company-form>div {
+      float: left;
+      width: calc(50% - 20px);
+    }
+    &>.form-actions,
+    &>.form-type-vertical-tabs  {
       clear: both;
-      content: "";
-      display: table;
+      float: none;
+      width: 100%;
+      &:after {
+        clear: both;
+        content: "";
+        display: table;
+      }
     }
   }
 
