@@ -6073,7 +6073,8 @@ table .checkbox.form-no-label, table .radio.form-no-label {
     height: 34px; }
 
 .limograde-search-city {
-  display: inline-block; }
+  display: inline-block;
+  margin-left: 0.3em; }
   @media (max-width: 767px) {
     .limograde-search-city {
       margin-bottom: 20px; } }

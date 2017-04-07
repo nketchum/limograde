@@ -279,6 +279,7 @@
 
 .limograde-search-city {
   display: inline-block;
+  margin-left: 0.3em;
 
   @include breakpoint(max-width $screen-xs-max) {
     margin-bottom: 20px;
