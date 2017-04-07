@@ -6074,7 +6074,7 @@ table .checkbox.form-no-label, table .radio.form-no-label {
 
 .limograde-search-city {
   display: inline-block;
-  margin-left: 0.3em; }
+  margin-right: 0.3em; }
   @media (max-width: 767px) {
     .limograde-search-city {
       margin-bottom: 20px; } }
