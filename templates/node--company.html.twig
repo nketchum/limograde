@@ -81,7 +81,7 @@
 
     <div class="grade">
       {% if not page %}<a href="{{ url }}" class="btn btn-xs btn-primary">View all grades</a>{% endif %}
-      <a href="/grade/add?company={{ node.id }}&destination=node/{{ node.id }}" class="btn btn-xs btn-info">Add your grade</a>
+      {% if page %}<a href="/grade/add?company={{ node.id }}&destination=node/{{ node.id }}" class="btn btn-xs btn-info">Add your grade</a>{% endif %}
     </div>
 
     {{ title_prefix }}

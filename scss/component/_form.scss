@@ -279,6 +279,11 @@
 
 .limograde-search-city {
   display: inline-block;
+  // We need an extra right margin for prod.
+  // WARNING: twig debugging inserts *extra* space, make sure
+  // to ignore extra space lest it gets removed, thus removing ALL
+  // space between the city filter and search button when twig debugging
+  // is turned off in prod.
   margin-right: 0.3em;
 
   @include breakpoint(max-width $screen-xs-max) {
