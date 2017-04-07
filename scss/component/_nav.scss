@@ -54,3 +54,51 @@ body {
     max-width: (($container-lg - $grid-gutter-width));
   }
 }
+
+.nav>li>a {
+  text-transform: capitalize;
+}
+
+.navbar-brand {
+  padding-top: ($grid-gutter-width / 2);
+}
+
+.navbar-right {
+  margin-bottom: ($grid-gutter-width / 2);
+
+  @include breakpoint(max-width $screen-sm-max) {
+    clear: both;
+  }
+}
+
+.navbar-default {
+  background-color: #333;
+  border: none;
+  border-radius: 0;
+  clear: both;
+
+  .navbar-nav li {
+    a {
+      color: #e7e7e7;
+
+      &:focus,
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+}
+
+@include breakpoint(min-width $screen-sm-min) {
+  .region-header {
+    nav {
+      float: right;
+    }
+  }
+}
+
+.region-footer {
+  ul.nav li {
+    display: inline-block;
+  }
+}

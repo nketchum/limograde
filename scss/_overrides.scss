@@ -7,8 +7,9 @@
 @import "component/filter";
 @import "component/form";
 @import "component/icon";
-@import "component/navbar";
+@import "component/nav";
 @import "component/node";
+@import "component/page";
 @import "component/panel";
 @import "component/progress-bar";
 @import "component/table-drag";
@@ -27,7 +28,11 @@ ol, ul {
 
 // Page header.
 .page-header {
-  margin-top: 0;
+  margin: $line-height-computed 0 ($line-height-computed * 1.5);
+}
+
+h1.page-header {
+  text-transform: capitalize;
 }
 
 // Footer.
@@ -57,7 +62,6 @@ p:last-child,
   }
 }
 
-
 .help-block, .control-group .help-inline {
   color: $gray-light;
   font-size: 12px;
@@ -66,4 +70,8 @@ p:last-child,
   &:first-child {
     margin-top: 0;
   }
+}
+
+.btn {
+  text-transform: capitalize;
 }

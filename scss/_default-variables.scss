@@ -10,5 +10,7 @@
  * ./limograde/bootstrap/assets/stylesheets/bootstrap/_variables.scss
  */
 
+@import "../bootstrap/assets/stylesheets/bootstrap/variables";
+
 // Set the proper directory for the Bootstrap Glyphicon font.
 $icon-font-path: '../bootstrap/assets/fonts/bootstrap/';
