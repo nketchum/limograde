@@ -41,6 +41,9 @@
     &::-ms-expand {
       opacity: 0;
     }
+    &#edit-type  {
+      text-transform: capitalize;
+    }
   }
   &:after {
     color: $brand-primary;

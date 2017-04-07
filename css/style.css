@@ -5898,6 +5898,8 @@ table .checkbox.form-no-label, table .radio.form-no-label {
     padding-right: 2em; }
     .select-wrapper select::-ms-expand {
       opacity: 0; }
+    .select-wrapper select#edit-type {
+      text-transform: capitalize; }
   .select-wrapper:after {
     color: #337ab7;
     content: '▼';
