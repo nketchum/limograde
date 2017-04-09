@@ -21,9 +21,9 @@ body {
     padding-bottom: ($navbar-height + ($grid-gutter-width / 2));
   }
 
-  @media #{$tablet} {
-    margin-top: ($grid-gutter-width / 2);
-  }
+  // @media #{$tablet} {
+  //   margin-top: ($grid-gutter-width / 2);
+  // }
   @media #{$mobile} {
     &.toolbar-vertical {
       &.navbar-is-fixed-top,
@@ -60,11 +60,13 @@ body {
 }
 
 .navbar-brand {
-  padding-top: ($grid-gutter-width / 2);
+  padding-top: $grid-gutter-width;
+  padding-bottom: $grid-gutter-width;
 }
 
 .navbar-right {
   margin-bottom: ($grid-gutter-width / 2);
+  margin-top: ($grid-gutter-width / 2);
 
   @include breakpoint(max-width $screen-sm-max) {
     clear: both;

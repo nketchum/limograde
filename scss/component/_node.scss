@@ -13,14 +13,8 @@
 article.full,
 article.teaser,
 article.mini {
-  border-bottom: 5px solid $gray-lighter;
   margin-bottom: $grid-gutter-width;
   padding-bottom: $grid-gutter-width;
-
-  &:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-  }
 
   .group,
   .field--name-field-photos,
