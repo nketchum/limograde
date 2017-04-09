@@ -104,8 +104,10 @@
   }
 }
 
-.node-form {
-  margin-bottom: 2em;
+.node-form,
+.grade-form,
+.vehicle-form {
+  margin-top: 2em;
   &>.field--type-language {
     margin-bottom: 0 !important;
   }

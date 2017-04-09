@@ -62,6 +62,13 @@ article.mini {
     }
   }
 
+  .field--name-field-location {
+    span.country {
+      display: none;
+    }
+  }
+
+  .field--name-field-view-grades,
   .field--name-field-view-vehicles {
     clear: both;
     @include clearfix;
@@ -74,8 +81,12 @@ article.mini {
     }
   }
 
-  // match bootstrap h4 vars
-  .field--name-field-view-vehicles .field__item__label {
+}
+
+// match bootstrap h4 vars
+.block-title,
+.field--name-field-view-vehicles .field__label,
+.field--name-field-view-grades .field__label, {
     color: $headings-color;
     font-family: $headings-font-family;
     font-size: $font-size-h4;
@@ -83,6 +94,5 @@ article.mini {
     line-height: $headings-line-height;
     margin-bottom: ($line-height-computed / 2);
     margin-top: ($line-height-computed / 2);
-  }
-
+    text-transform: capitalize;
 }
