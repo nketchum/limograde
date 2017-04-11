@@ -5728,7 +5728,7 @@ button.close {
 
 
 ul.local-actions {
-  margin-bottom: 15px; }
+  margin-bottom: 20px; }
 
 
 .alert-sm {
@@ -5945,14 +5945,10 @@ table .checkbox.form-no-label, table .radio.form-no-label {
 .form-actions .btn-group .btn {
   margin-right: 0; }
 
-.node-form,
-.grade-form,
-.vehicle-form {
-  margin-top: 2em; }
-  .node-form > .field--type-language,
-  .grade-form > .field--type-language,
-  .vehicle-form > .field--type-language {
-    margin-bottom: 0 !important; }
+.node-form > .field--type-language,
+.grade-form > .field--type-language,
+.vehicle-form > .field--type-language {
+  margin-bottom: 0 !important; }
 
 .form-group {
   margin-bottom: 20px; }
@@ -6068,7 +6064,7 @@ table .checkbox.form-no-label, table .radio.form-no-label {
       display: table; } }
 
 .views-exposed-form {
-  margin-bottom: 15px; }
+  margin-bottom: 20px; }
   .views-exposed-form form {
     background-color: #f5f5f5;
     border-radius: 4px;
@@ -6135,9 +6131,17 @@ body {
 .nav > li > a {
   text-transform: capitalize; }
 
+.region-header .nav > li > a {
+  letter-spacing: 0.05em;
+  text-transform: uppercase; }
+
 .navbar-brand {
+  color: #ddd !important;
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 30px;
   padding-top: 30px;
-  padding-bottom: 30px; }
+  text-transform: uppercase; }
 
 .navbar-right {
   margin-bottom: 15px;
@@ -6151,14 +6155,27 @@ body {
   border: none;
   border-radius: 0;
   clear: both; }
-  .navbar-default .navbar-nav li a {
-    color: #e7e7e7; }
-    .navbar-default .navbar-nav li a:focus, .navbar-default .navbar-nav li a:hover {
-      color: #fff; }
+  .navbar-default .navbar-nav {
+    margin: 0 -15px; }
+    .navbar-default .navbar-nav > li > a {
+      color: #aaa;
+      font-size: 14px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      text-transform: uppercase; }
+      .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+        color: #fff; }
+    .navbar-default .navbar-nav > li a.is-active,
+    .navbar-default .navbar-nav > li.active a {
+      background: #fff;
+      color: #555; }
 
 @media (min-width: 768px) {
   .region-header nav {
-    float: right; } }
+    float: right; }
+    .region-header nav a:hover,
+    .region-header nav a:focus {
+      background: #333; } }
 
 .region-footer ul.nav li {
   display: inline-block; }
@@ -6170,108 +6187,108 @@ body {
 .node-preview-form-select {
   padding: 15px; }
 
-article.full,
-article.teaser,
-article.mini {
-  margin-bottom: 30px;
-  padding-bottom: 30px; }
+article.full h3, article.full h4, article.full h5,
+article.teaser h3,
+article.teaser h4,
+article.teaser h5,
+article.mini h3,
+article.mini h4,
+article.mini h5 {
+  margin-top: 10px; }
+
+article.full .group,
+article.teaser .group,
+article.mini .group {
+  margin-bottom: 20px; }
+
+@media (min-width: 992px) {
   article.full .group,
-  article.full .field--name-field-photos,
-  article.full .field--name-body,
   article.teaser .group,
+  article.mini .group {
+    float: left;
+    width: 33.33333%; }
+  article.full .grade,
+  article.teaser .grade,
+  article.mini .grade {
+    float: right;
+    margin-left: 30px;
+    width: 33.33333%; }
+  article.full .field--name-field-photos,
   article.teaser .field--name-field-photos,
+  article.mini .field--name-field-photos {
+    clear: right;
+    float: right;
+    margin-left: 30px;
+    width: 33.33333%; }
+  article.full .field--name-body,
   article.teaser .field--name-body,
-  article.mini .group,
-  article.mini .field--name-field-photos,
   article.mini .field--name-body {
-    margin-bottom: 30px; }
-  @media (min-width: 992px) {
-    article.full .group,
-    article.teaser .group,
-    article.mini .group {
-      float: left;
-      width: 33.33333%; }
-    article.full .grade,
-    article.teaser .grade,
-    article.mini .grade {
-      float: right;
-      margin-left: 30px;
-      width: 33.33333%; }
-    article.full .field--name-field-photos,
-    article.teaser .field--name-field-photos,
-    article.mini .field--name-field-photos {
-      clear: right;
-      float: right;
-      margin-left: 30px;
-      width: 33.33333%; }
-    article.full .field--name-body,
-    article.teaser .field--name-body,
-    article.mini .field--name-body {
-      clear: left; }
-      article.full .field--name-body:before, article.full .field--name-body:after,
-      article.teaser .field--name-body:before,
-      article.teaser .field--name-body:after,
-      article.mini .field--name-body:before,
-      article.mini .field--name-body:after {
-        content: " ";
-        display: table; }
-      article.full .field--name-body:after,
-      article.teaser .field--name-body:after,
-      article.mini .field--name-body:after {
-        clear: both; } }
-  article.full .field--name-field-photos:before, article.full .field--name-field-photos:after,
-  article.teaser .field--name-field-photos:before,
-  article.teaser .field--name-field-photos:after,
-  article.mini .field--name-field-photos:before,
-  article.mini .field--name-field-photos:after {
-    content: " ";
-    display: table; }
-  article.full .field--name-field-photos:after,
-  article.teaser .field--name-field-photos:after,
-  article.mini .field--name-field-photos:after {
-    clear: both; }
-  article.full .field--name-field-photos .field--item,
-  article.teaser .field--name-field-photos .field--item,
-  article.mini .field--name-field-photos .field--item {
-    float: left; }
-  article.full .field--name-field-location span.country,
-  article.teaser .field--name-field-location span.country,
-  article.mini .field--name-field-location span.country {
-    display: none; }
-  article.full .field--name-field-view-grades,
-  article.full .field--name-field-view-vehicles,
-  article.teaser .field--name-field-view-grades,
-  article.teaser .field--name-field-view-vehicles,
-  article.mini .field--name-field-view-grades,
-  article.mini .field--name-field-view-vehicles {
-    clear: both; }
-    article.full .field--name-field-view-grades:before, article.full .field--name-field-view-grades:after,
-    article.full .field--name-field-view-vehicles:before,
-    article.full .field--name-field-view-vehicles:after,
-    article.teaser .field--name-field-view-grades:before,
-    article.teaser .field--name-field-view-grades:after,
-    article.teaser .field--name-field-view-vehicles:before,
-    article.teaser .field--name-field-view-vehicles:after,
-    article.mini .field--name-field-view-grades:before,
-    article.mini .field--name-field-view-grades:after,
-    article.mini .field--name-field-view-vehicles:before,
-    article.mini .field--name-field-view-vehicles:after {
+    clear: left; }
+    article.full .field--name-body:before, article.full .field--name-body:after,
+    article.teaser .field--name-body:before,
+    article.teaser .field--name-body:after,
+    article.mini .field--name-body:before,
+    article.mini .field--name-body:after {
       content: " ";
       display: table; }
-    article.full .field--name-field-view-grades:after,
-    article.full .field--name-field-view-vehicles:after,
-    article.teaser .field--name-field-view-grades:after,
-    article.teaser .field--name-field-view-vehicles:after,
-    article.mini .field--name-field-view-grades:after,
-    article.mini .field--name-field-view-vehicles:after {
-      clear: both; }
-  article.full .field--name-field-credentials .field--item,
-  article.full .field--name-field-payment .field--item,
-  article.teaser .field--name-field-credentials .field--item,
-  article.teaser .field--name-field-payment .field--item,
-  article.mini .field--name-field-credentials .field--item,
-  article.mini .field--name-field-payment .field--item {
-    display: inline-block; }
+    article.full .field--name-body:after,
+    article.teaser .field--name-body:after,
+    article.mini .field--name-body:after {
+      clear: both; } }
+
+article.full .field--name-field-photos:before, article.full .field--name-field-photos:after,
+article.teaser .field--name-field-photos:before,
+article.teaser .field--name-field-photos:after,
+article.mini .field--name-field-photos:before,
+article.mini .field--name-field-photos:after {
+  content: " ";
+  display: table; }
+
+article.full .field--name-field-photos:after,
+article.teaser .field--name-field-photos:after,
+article.mini .field--name-field-photos:after {
+  clear: both; }
+
+article.full .field--name-field-photos .field--item,
+article.teaser .field--name-field-photos .field--item,
+article.mini .field--name-field-photos .field--item {
+  float: left; }
+
+article.full .field--name-field-view-grades,
+article.full .field--name-field-view-vehicles,
+article.teaser .field--name-field-view-grades,
+article.teaser .field--name-field-view-vehicles,
+article.mini .field--name-field-view-grades,
+article.mini .field--name-field-view-vehicles {
+  clear: both; }
+  article.full .field--name-field-view-grades:before, article.full .field--name-field-view-grades:after,
+  article.full .field--name-field-view-vehicles:before,
+  article.full .field--name-field-view-vehicles:after,
+  article.teaser .field--name-field-view-grades:before,
+  article.teaser .field--name-field-view-grades:after,
+  article.teaser .field--name-field-view-vehicles:before,
+  article.teaser .field--name-field-view-vehicles:after,
+  article.mini .field--name-field-view-grades:before,
+  article.mini .field--name-field-view-grades:after,
+  article.mini .field--name-field-view-vehicles:before,
+  article.mini .field--name-field-view-vehicles:after {
+    content: " ";
+    display: table; }
+  article.full .field--name-field-view-grades:after,
+  article.full .field--name-field-view-vehicles:after,
+  article.teaser .field--name-field-view-grades:after,
+  article.teaser .field--name-field-view-vehicles:after,
+  article.mini .field--name-field-view-grades:after,
+  article.mini .field--name-field-view-vehicles:after {
+    clear: both; }
+
+article.full .field--name-field-credentials .field--item,
+article.full .field--name-field-payment .field--item,
+article.teaser .field--name-field-credentials .field--item,
+article.teaser .field--name-field-payment .field--item,
+article.mini .field--name-field-credentials .field--item,
+article.mini .field--name-field-payment .field--item {
+  display: inline-block; }
 
 .block-title,
 .field--name-field-view-vehicles .field__label,
@@ -6284,6 +6301,16 @@ article.mini {
   margin-bottom: 10px;
   margin-top: 10px;
   text-transform: capitalize; }
+
+article.teaser .field--name-field-view-vehicles {
+  margin-top: 20px; }
+  article.teaser .field--name-field-view-vehicles .field__label {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: bold; }
+
+article.mini .group {
+  margin-bottom: 0; }
 
 
 .container-fluid.main-container {
@@ -6298,16 +6325,12 @@ article.mini {
     display: table; }
   .region-header:after {
     clear: both; }
+  .region-header a {
+    color: #999; }
 
-@media (min-width: 480px) {
-  .region-header,
-  .region-footer {
-    padding: 0 45px; } }
-
-@media (max-width: 767px) {
-  .region-header,
-  .region-footer {
-    padding: 0 15px; } }
+.region-header,
+.region-footer {
+  padding: 0 15px; }
 
 
 .panel-title {
@@ -6480,6 +6503,9 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
     body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tray, body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed .toolbar-tray > .toolbar-lining:before {
       width: 240px; }
 
+.view > .view-content > table {
+  margin-bottom: 0; }
+
 
 .ui-autocomplete {
   background: #fff;
@@ -6518,7 +6544,8 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
       color: #fff; }
 
 body {
-  font-family: Helvetica, Arial, sans-serif; }
+  font-family: Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; }
 
 ol, ul {
   padding-left: 1.5em; }

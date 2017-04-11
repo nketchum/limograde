@@ -107,7 +107,6 @@
 .node-form,
 .grade-form,
 .vehicle-form {
-  margin-top: 2em;
   &>.field--type-language {
     margin-bottom: 0 !important;
   }
@@ -262,7 +261,7 @@
 }
 
 .views-exposed-form {
-  margin-bottom: $grid-gutter-width / 2;
+  margin-bottom: $line-height-computed;
 
   // Match bootstrap "well" style.
   form {

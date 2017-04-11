@@ -11,20 +11,13 @@
   background: #1a1a1a;
   margin-left: -15px;
   margin-right: -15px;
+
+  a {
+    color: #999;
+  }
 }
 
-@include breakpoint(min-width $screen-xs-min) {
-
-  .region-header,
-  .region-footer {
-    padding: 0 ($grid-gutter-width * 1.5);
-  }
-
-}
-
-@include breakpoint(max-width $screen-xs-max) {
-  .region-header,
-  .region-footer {
-    padding: 0 ($grid-gutter-width / 2);
-  }
+.region-header,
+.region-footer {
+  padding: 0 ($grid-gutter-width / 2);
 }

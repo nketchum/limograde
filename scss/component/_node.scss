@@ -13,13 +13,13 @@
 article.full,
 article.teaser,
 article.mini {
-  margin-bottom: $grid-gutter-width;
-  padding-bottom: $grid-gutter-width;
 
-  .group,
-  .field--name-field-photos,
-  .field--name-body {
-    margin-bottom: $grid-gutter-width;
+  h3, h4, h5 {
+    margin-top: $line-height-computed / 2;
+  }
+
+  .group {
+    margin-bottom: $line-height-computed;
   }
 
   @include breakpoint(min-width $screen-md-min) {
@@ -56,12 +56,6 @@ article.mini {
     }
   }
 
-  .field--name-field-location {
-    span.country {
-      display: none;
-    }
-  }
-
   .field--name-field-view-grades,
   .field--name-field-view-vehicles {
     clear: both;
@@ -89,4 +83,22 @@ article.mini {
     margin-bottom: ($line-height-computed / 2);
     margin-top: ($line-height-computed / 2);
     text-transform: capitalize;
+}
+
+article.teaser {
+  .field--name-field-view-vehicles {
+    margin-top: $line-height-computed;
+
+    .field__label {
+      margin-top: 0;
+      font-size: 14px;
+      font-weight: bold;
+    }
+  }
+}
+
+article.mini {
+  .group {
+    margin-bottom: 0;
+  }
 }

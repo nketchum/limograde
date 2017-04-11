@@ -59,9 +59,18 @@ body {
   text-transform: capitalize;
 }
 
+.region-header .nav>li>a {
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
 .navbar-brand {
-  padding-top: $grid-gutter-width;
+  color: #ddd !important;
+  font-size: 20px;
+  font-weight: 700;
   padding-bottom: $grid-gutter-width;
+  padding-top: $grid-gutter-width;
+  text-transform: uppercase;
 }
 
 .navbar-right {
@@ -79,22 +88,42 @@ body {
   border-radius: 0;
   clear: both;
 
-  .navbar-nav li {
-    a {
-      color: #e7e7e7;
+  .navbar-nav {
+    margin: 0 (-$navbar-padding-horizontal);
 
-      &:focus,
-      &:hover {
-        color: #fff;
+    & > li {
+      & > a {
+        color: #aaa;
+        font-size: 14px;
+        padding-top:    15px;
+        padding-bottom: 15px;
+        text-transform: uppercase;
+
+        &:focus,
+        &:hover {
+          color: #fff;
+        }
+      }
+
+      & a.is-active,
+      &.active a {
+        background: #fff;
+        color: #555;
       }
     }
+
   }
+
 }
 
 @include breakpoint(min-width $screen-sm-min) {
   .region-header {
     nav {
       float: right;
+      a:hover,
+      a:focus {
+        background: #333;
+      }
     }
   }
 }
