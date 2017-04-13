@@ -55,13 +55,14 @@ body {
   }
 }
 
-.nav>li>a {
+.nav > li > a {
   text-transform: capitalize;
-}
 
-.region-header .nav>li>a {
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  @include breakpoint(min-width $screen-sm-min) {
+    padding-left: ($grid-gutter-width / 3);
+    padding-right: ($grid-gutter-width / 3);
+  }
+
 }
 
 .navbar-brand {
@@ -95,8 +96,11 @@ body {
       & > a {
         color: #aaa;
         font-size: 14px;
-        padding-top:    15px;
-        padding-bottom: 15px;
+        font-weight: bold;
+        padding-left: ($grid-gutter-width / 2);
+        padding-right: ($grid-gutter-width / 2);
+        padding-top:    ($grid-gutter-width / 2);
+        padding-bottom: ($grid-gutter-width / 2);
         text-transform: uppercase;
 
         &:focus,
@@ -116,14 +120,18 @@ body {
 
 }
 
-@include breakpoint(min-width $screen-sm-min) {
-  .region-header {
-    nav {
+nav {
+  font-size: $font-size-medium;
+}
+
+.region-header {
+  nav {
+    @include breakpoint(min-width $screen-sm-min) {
       float: right;
-      a:hover,
-      a:focus {
-        background: #333;
-      }
+    }
+    a:hover,
+    a:focus {
+      background: #333;
     }
   }
 }
@@ -131,5 +139,17 @@ body {
 .region-footer {
   ul.nav li {
     display: inline-block;
+  }
+}
+
+@include breakpoint(max-width $screen-xs-max) {
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .region-footer {
+    ul.nav li {
+      display: block;
+    }
   }
 }

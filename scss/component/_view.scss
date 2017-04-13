@@ -1,4 +1,49 @@
 
-  .view>.view-content>table {
-    margin-bottom: 0;
+.view>.view-content>table {
+  margin-bottom: 0;
+}
+
+.view-header {
+  .grade {
+    float: right;
+    margin-left: $grid-gutter-width;
+    margin-top: 9px;
   }
+}
+
+.view .table td.is-active {
+  background-color: $gray-lightest;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.block-views .view.panel:last-child {
+  margin-bottom: $line-height-computed;
+}
+
+.block-views:last-child .view.panel:last-child {
+  margin-bottom: 0;
+}
+
+.view-vehicles .table {
+  font-size: $font-size-medium;
+
+  & > tbody > tr {
+    & > td:nth-child(1),
+    & > td:nth-child(10) {
+      width: auto;
+    }
+    & > td:nth-child(3),
+    & > td:nth-child(4),
+    & > td:nth-child(5),
+    & > td:nth-child(6),
+    & > td:nth-child(7),
+    & > td:nth-child(8) {
+      width: percentage(1/12);
+    }
+    & > td:nth-child(2),
+    & > td:nth-child(9) {
+      width: percentage(1/4);
+    }
+  }
+}

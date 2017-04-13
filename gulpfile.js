@@ -12,6 +12,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var stripCssComments = require('gulp-strip-css-comments');
 var uglify = require('gulp-uglify');
 var uncss = require('gulp-uncss');
+var googleWebFonts = require('gulp-google-webfonts');
 
 var sass_config = {
   importer: importer,
@@ -22,6 +23,13 @@ var sass_config = {
     'node_modules/compass-mixins/lib/'
   ]
 };
+
+// Google webfonts
+gulp.task('fonts', function () {
+  return gulp.src('./fonts.list')
+    .pipe(googleWebFonts({}))
+    .pipe(gulp.dest('./fonts'));
+});
 
 // Uglifies javascript
 gulp.task('uglify', function() {
@@ -50,6 +58,7 @@ gulp.task('default', function(){
   livereload.listen();
     gulp.watch('./scss/**/*.scss', ['sass']);
     gulp.watch('./js/*.js', ['uglify']);
+    gulp.watch('./fonts.list', ['fonts']);
     gulp.watch(['./css/style.css', './**/*.twig', './scripts/*.js'], function (files){
       livereload.changed(files)
     });

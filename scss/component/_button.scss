@@ -1,0 +1,16 @@
+.btn {
+    font-weight: bold;
+}
+
+.quote-switch {
+    font-size: 14px;
+    font-weight: bold;
+    height: 20px;
+    line-height: 12px;
+    padding: 3px;
+    width: 18px;
+
+    &.quote-switch-remove {
+      padding-top: 2px;
+    }
+}

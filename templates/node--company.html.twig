@@ -81,11 +81,7 @@
 
 <article{{ attributes.addClass(classes) }}>
 
-  <header>
-
-    <div class="grade">
-      {% if page %}<a href="/grade/add?company={{ node.id }}&destination={{ url }}" class="btn btn-xs btn-info">Add your grade</a>{% endif %}
-    </div>
+  <header class="panel-heading">
 
     {{ title_prefix }}
     <h3{{ title_attributes }}>

@@ -11,13 +11,15 @@
   background: #1a1a1a;
   margin-left: -15px;
   margin-right: -15px;
+  padding: 0 ($grid-gutter-width / 2);
 
   a {
     color: #999;
   }
 }
 
-.region-header,
-.region-footer {
-  padding: 0 ($grid-gutter-width / 2);
+@include breakpoint(min-width $screen-sm-min) {
+  .region-header {
+    padding: 0 $grid-gutter-width;
+  }
 }
