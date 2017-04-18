@@ -13,13 +13,31 @@
 article.full,
 article.teaser,
 article.mini {
+  position: relative;
+
+  h1, h2, h3, h4, h5, h6 {
+    margin-top: $line-height-computed / 2;
+  }
+
+  img {
+    height: auto;
+    min-width: 100%;
+    max-width: 100%;
+  }
 
   .panel-heading {
     margin: -15px -15px 30px;
+
+    h3 {
+      font-weight: bold;
+    }
+
   }
 
-  h3, h4, h5 {
-    margin-top: $line-height-computed / 2;
+  & > .btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
   }
 
   .group,
@@ -76,7 +94,7 @@ article.mini {
 .field--name-field-view-grades .field__label, {
     color: $headings-color;
     font-family: $headings-font-family;
-    font-size: $font-size-h4;
+    font-size: $font-size-h5;
     font-weight: $headings-font-weight;
     line-height: $headings-line-height;
     margin-bottom: ($line-height-computed / 2);
@@ -99,5 +117,14 @@ article.teaser {
 article.mini {
   .group {
     margin-bottom: 0;
+  }
+}
+
+article.company,
+article.grade {
+  font-size: $font-size-medium;
+
+  &.mini {
+    font-size: inherit;
   }
 }

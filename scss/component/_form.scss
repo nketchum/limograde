@@ -116,6 +116,14 @@
   margin-bottom: 20px;
 }
 
+.form-inline {
+  display: inline-block;
+}
+
+.filter-wrapper {
+  display: none;
+}
+
 .file--image {
   display: none;
 }
@@ -133,7 +141,7 @@
       cursor: pointer;
       display: inline-block;
       font-size: 14px;
-      font-weight: 400;
+      font-weight: bold;
       line-height: 1.42857;
       margin-bottom: 0;
       margin-bottom: 0;
@@ -219,11 +227,32 @@
   }
 }
 
+.field--widget-inline-entity-form-complex.field--name-field-vehicles {
+  thead {
+    display: table-header-group;
+  }
+  .tabledrag-handle {
+    margin-top: 0;
+    padding: 5px;
+  }
+  .table>tbody>tr>td {
+    vertical-align: middle;
+  }
+  .inline-entity-form-vehicle-label {
+    background: $gray-lightest;
+    font-weight: bold;
+  }
+}
+
 .field--widget-double-field {
   .form-group .form-group {
     display: inline-block;
     margin-bottom: 0;
   }
+}
+
+.ief-entity-operations {
+  white-space: nowrap;
 }
 
 #edit-field-grade-wrapper {
@@ -235,6 +264,7 @@
 @include breakpoint(min-width $screen-md-min) {
 
   .node-form {
+
     &>div {
       margin-left: 10px;
       margin-right: 10px;
@@ -256,6 +286,13 @@
         display: table;
       }
     }
+
+    &>.field--widget-inline-entity-form-complex.field--name-field-vehicles {
+      @include clearfix;
+      clear: both;
+      width: calc(100% - 20px);
+    }
+
   }
 
 }
@@ -270,7 +307,11 @@
     border: 1px solid #e3e3e3;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
     min-height: 20px;
-    padding: 19px 14px;
+    padding: 14px;
+  }
+
+  .select-wrapper select {
+    font-weight: bold;
   }
 
   .button {

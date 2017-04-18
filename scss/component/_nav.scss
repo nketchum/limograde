@@ -120,15 +120,10 @@ body {
 
 }
 
-nav {
-  font-size: $font-size-medium;
-}
-
 .region-header {
   nav {
-    @include breakpoint(min-width $screen-sm-min) {
-      float: right;
-    }
+    float: right;
+
     a:hover,
     a:focus {
       background: #333;
@@ -152,4 +147,13 @@ nav {
       display: block;
     }
   }
+}
+
+ul.local-actions {
+  float: right;
+  margin: 0;
+  position: relative;
+  right: 10px;
+  top: 17px;
+  z-index: 100;
 }

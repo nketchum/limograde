@@ -3,11 +3,13 @@
 @import "component/action";
 @import "component/alert";
 @import "component/ajax";
+@import "component/block";
 @import "component/button";
 @import "component/field";
 @import "component/file";
 @import "component/filter";
 @import "component/form";
+@import "component/grade";
 @import "component/icon";
 @import "component/nav";
 @import "component/node";
@@ -26,6 +28,7 @@ $font-family-sans-serif:  'Open Sans', Helvetica, Arial, sans-serif;
 
 body {
   font-family: $font-family-sans-serif;
+  font-size: 13px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -43,6 +46,18 @@ ol, ul {
 // Page header.
 .page-header {
   margin: $line-height-computed 0 ($line-height-computed * 1.5);
+  padding-bottom: 14px;
+}
+
+.panel-heading {
+  margin: 0;
+}
+
+.panel-default {
+  .panel-heading {
+    background-color: #f5f5f5;
+    border-color: #ddd;
+  }
 }
 
 h1.page-header {

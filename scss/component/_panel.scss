@@ -12,3 +12,17 @@
     text-decoration: none;
   }
 }
+
+.panel-item {
+  border-bottom: 1px solid #ddd;
+  padding: $line-height-computed 0;
+}
+
+.panel-item:first-child {
+  padding-top: ($line-height-computed / 2);
+}
+
+.panel-item:last-child {
+  border-bottom: none;
+  padding-bottom: ($line-height-computed / 2);
+}

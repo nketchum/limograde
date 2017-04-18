@@ -7,14 +7,8 @@
   .grade {
     float: right;
     margin-left: $grid-gutter-width;
-    margin-top: 9px;
+    margin-top: 4px;
   }
-}
-
-.view .table td.is-active {
-  background-color: $gray-lightest;
-  font-weight: bold;
-  text-transform: uppercase;
 }
 
 .block-views .view.panel:last-child {
@@ -25,25 +19,110 @@
   margin-bottom: 0;
 }
 
-.view-vehicles .table {
-  font-size: $font-size-medium;
+.view .table {
+  & > thead > tr > th:first-child,
+  & > tbody > tr > td:first-child {
+    padding-left: 0;
+  }
+  & > thead > tr > th:last-child,
+  & > tbody > tr > td:last-child {
+    padding-right: 0;
+  }
+}
 
-  & > tbody > tr {
-    & > td:nth-child(1),
-    & > td:nth-child(10) {
-      width: auto;
-    }
-    & > td:nth-child(3),
-    & > td:nth-child(4),
-    & > td:nth-child(5),
-    & > td:nth-child(6),
-    & > td:nth-child(7),
-    & > td:nth-child(8) {
-      width: percentage(1/12);
-    }
-    & > td:nth-child(2),
-    & > td:nth-child(9) {
-      width: percentage(1/4);
+.view.panel-warning {
+  .table {
+    color: #777;
+
+    & > thead,
+    & > tbody {
+      & > tr {
+        & > th,
+        & > td {
+          border-color: #faebcc;
+        }
+      }
     }
   }
+}
+
+.view {
+  .btn-group.dropdown {
+    & > .btn {
+      font-weight: normal;
+    }
+  }
+}
+
+.view-grades.view-display-id-block_unapproved {
+  font-size: $font-size-medium;
+
+  .double-field-first,
+  .double-field-second {
+    display: inline;
+  }
+}
+
+.view-vehicles {
+  .btn-group.dropdown {
+    white-space: nowrap;
+
+    & > .btn {
+      float: none;
+    }
+  }
+}
+
+.view-vehicles .table {
+
+  td.is-active {
+    background-color: $gray-lightest;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  & > thead,
+  & > tbody {
+    & > tr {
+      & > th,
+      & > td {
+        vertical-align: middle;
+
+        &:nth-child(1),
+        &:nth-child(10) {
+          width: auto;
+        }
+        &:nth-child(3),
+        &:nth-child(4),
+        &:nth-child(5),
+        &:nth-child(6),
+        &:nth-child(7),
+        &:nth-child(8) {
+          width: percentage(1/12);
+        }
+        &:nth-child(2),
+        &:nth-child(9) {
+          width: percentage(1/4);
+        }
+
+        @include breakpoint(max-width $screen-xs-max) {
+          &:nth-child(2) {
+            width: percentage(7/10);
+          }
+          &:nth-child(4),
+          &:nth-child(8) {
+            width: percentage(3/20);
+          }
+          &:nth-child(3),
+          &:nth-child(5),
+          &:nth-child(6),
+          &:nth-child(7),
+          &:nth-child(9) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
 }
