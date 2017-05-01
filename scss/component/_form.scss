@@ -227,6 +227,14 @@
   }
 }
 
+// Make sure photo thumbs line up with drag handle in Safari.
+#edit-field-photos-wrapper {
+  .image-widget.row  {
+    float: left;
+  }
+}
+
+
 .field--widget-inline-entity-form-complex.field--name-field-vehicles {
   thead {
     display: table-header-group;

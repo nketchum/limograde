@@ -8,9 +8,10 @@
   position: relative;
   display: inline-block;
   vertical-align: middle; // match .btn alignment given font-size hack above
+  white-space: nowrap;
   > .btn {
     position: relative;
-    float: left;
+    // float: left;
     // Bring the "active" button to the front
     &:hover,
     &:focus,

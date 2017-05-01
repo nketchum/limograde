@@ -3235,11 +3235,11 @@ tbody.collapse.in {
 .btn-group-vertical {
   position: relative;
   display: inline-block;
-  vertical-align: middle; }
+  vertical-align: middle;
+  white-space: nowrap; }
   .btn-group > .btn,
   .btn-group-vertical > .btn {
-    position: relative;
-    float: left; }
+    position: relative; }
     .btn-group > .btn:hover, .btn-group > .btn:focus, .btn-group > .btn:active, .btn-group > .btn.active,
     .btn-group-vertical > .btn:hover,
     .btn-group-vertical > .btn:focus,
@@ -6056,6 +6056,9 @@ table .checkbox.form-no-label, table .radio.form-no-label {
 .field--widget-image-image .table > tbody > tr:first-child > td,
 .field--widget-inline-entity-form-complex .table > tbody > tr:first-child > td {
   border-top: none; }
+
+#edit-field-photos-wrapper .image-widget.row {
+  float: left; }
 
 .field--widget-inline-entity-form-complex.field--name-field-vehicles thead {
   display: table-header-group; }
