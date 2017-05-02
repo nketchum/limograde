@@ -3,14 +3,6 @@
   margin-bottom: 0;
 }
 
-.view-header {
-  .grade {
-    float: right;
-    margin-left: $grid-gutter-width;
-    margin-top: 4px;
-  }
-}
-
 .block-views .view.panel:last-child {
   margin-bottom: $line-height-computed;
 }
@@ -71,55 +63,77 @@
       float: none;
     }
   }
-}
 
-.view-vehicles .table {
+  .table {
 
-  td.is-active {
-    background-color: $gray-lightest;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
+    td.is-active {
+      background-color: $gray-lightest;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
 
-  & > thead,
-  & > tbody {
-    & > tr {
-      & > th,
-      & > td {
-        vertical-align: middle;
+    & > thead,
+    & > tbody {
+      & > tr {
+        & > th,
+        & > td {
+          vertical-align: middle;
 
-        &:nth-child(1),
-        &:nth-child(10) {
-          width: auto;
-        }
-        &:nth-child(3),
-        &:nth-child(4),
-        &:nth-child(5),
-        &:nth-child(6),
-        &:nth-child(7),
-        &:nth-child(8) {
-          width: percentage(1/12);
-        }
-        &:nth-child(2),
-        &:nth-child(9) {
-          width: percentage(1/4);
-        }
-
-        @include breakpoint(max-width $screen-xs-max) {
-          &:nth-child(2) {
-            width: percentage(7/10);
-          }
-          &:nth-child(4),
-          &:nth-child(8) {
-            width: percentage(3/20);
+          &:nth-child(1),
+          &:nth-child(10) {
+            width: auto;
           }
           &:nth-child(3),
+          &:nth-child(4),
           &:nth-child(5),
           &:nth-child(6),
           &:nth-child(7),
-          &:nth-child(9) {
-            display: none;
+          &:nth-child(8) {
+            width: percentage(1/12);
           }
+          &:nth-child(2),
+          &:nth-child(9) {
+            width: percentage(1/4);
+          }
+
+          @include breakpoint(max-width $screen-xs-max) {
+            &:nth-child(2) {
+              width: percentage(7/10);
+            }
+            &:nth-child(4),
+            &:nth-child(8) {
+              width: percentage(3/20);
+            }
+            &:nth-child(3),
+            &:nth-child(5),
+            &:nth-child(6),
+            &:nth-child(7),
+            &:nth-child(9) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.view-display-id-block_1 {
+    .views-field-link-flag {
+      padding-right: 0.35em;
+    }
+
+    .item-list {
+      margin-bottom: $line-height-computed;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      ul {
+        padding-left: 0;
+
+        li {
+          list-style: none;
         }
       }
     }

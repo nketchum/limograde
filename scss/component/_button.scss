@@ -2,15 +2,44 @@
     font-weight: bold;
 }
 
+.views-field-link-flag a,
 .quote-switch {
     font-size: 14px;
     font-weight: bold;
-    height: 20px;
+    height: 15px;
     line-height: 12px;
-    padding: 3px;
-    width: 18px;
+    padding: 0;
+    width: 15px;
+
+    border-radius: 3px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     &.quote-switch-remove {
       padding-top: 2px;
     }
+}
+
+.view-header.panel-heading {
+  position: relative;
+  .btn.btn-xs {
+    position: absolute;
+    right: 15px;
+    top: 12px;
+  }
 }

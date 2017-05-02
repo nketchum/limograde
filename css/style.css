@@ -1130,7 +1130,7 @@ hr {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 1.1;
   color: inherit; }
   h1 small,
@@ -1193,10 +1193,10 @@ h3, .h3 {
   font-size: 18px; }
 
 h4, .h4 {
-  font-size: 17px; }
+  font-size: 15px; }
 
 h5, .h5 {
-  font-size: 16px; }
+  font-size: 14px; }
 
 h6, .h6 {
   font-size: 12px; }
@@ -4644,7 +4644,7 @@ button.list-group-item-danger {
     clear: both; }
 
 .panel-heading {
-  padding: 10px 15px;
+  padding: 15px;
   border-bottom: 1px solid transparent;
   border-top-right-radius: 3px;
   border-top-left-radius: 3px; }
@@ -4664,7 +4664,7 @@ button.list-group-item-danger {
     color: inherit; }
 
 .panel-footer {
-  padding: 10px 15px;
+  padding: 15px;
   background-color: #f5f5f5;
   border-top: 1px solid #ddd;
   border-bottom-right-radius: 3px;
@@ -5787,15 +5787,42 @@ html.js .ajax-new-content:empty {
 .btn {
   font-weight: bold; }
 
+.views-field-link-flag a,
 .quote-switch {
   font-size: 14px;
   font-weight: bold;
-  height: 20px;
+  height: 15px;
   line-height: 12px;
-  padding: 3px;
-  width: 18px; }
+  padding: 0;
+  width: 15px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .views-field-link-flag a.quote-switch-remove,
   .quote-switch.quote-switch-remove {
     padding-top: 2px; }
+
+.view-header.panel-heading {
+  position: relative; }
+  .view-header.panel-heading .btn.btn-xs, .view-header.panel-heading .btn-group-xs > .btn {
+    position: absolute;
+    right: 15px;
+    top: 12px; }
 
 
 .field--label {
@@ -6274,20 +6301,6 @@ article.full,
 article.teaser,
 article.mini {
   position: relative; }
-  article.full h1, article.full h2, article.full h3, article.full h4, article.full h5, article.full h6,
-  article.teaser h1,
-  article.teaser h2,
-  article.teaser h3,
-  article.teaser h4,
-  article.teaser h5,
-  article.teaser h6,
-  article.mini h1,
-  article.mini h2,
-  article.mini h3,
-  article.mini h4,
-  article.mini h5,
-  article.mini h6 {
-    margin-top: 10px; }
   article.full img,
   article.teaser img,
   article.mini img {
@@ -6307,7 +6320,7 @@ article.mini {
   article.mini > .btn {
     position: absolute;
     right: 15px;
-    top: 15px; }
+    top: 13px; }
   article.full .group,
   article.full .groups,
   article.teaser .group,
@@ -6388,8 +6401,8 @@ article.mini {
 .field--name-field-view-grades .field__label {
   color: inherit;
   font-family: inherit;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 700;
   line-height: 1.1;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -6622,11 +6635,6 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
 .view > .view-content > table {
   margin-bottom: 0; }
 
-.view-header .grade {
-  float: right;
-  margin-left: 30px;
-  margin-top: 4px; }
-
 .block-views .view.panel:last-child {
   margin-bottom: 20px; }
 
@@ -6741,6 +6749,18 @@ body.toolbar-fixed.toolbar-vertical.toolbar-tray-open.toolbar-fixed {
     .view-vehicles .table > tbody > tr > td:nth-child(9) {
       display: none; } }
 
+.view-vehicles.view-display-id-block_1 .views-field-link-flag {
+  padding-right: 0.35em; }
+
+.view-vehicles.view-display-id-block_1 .item-list {
+  margin-bottom: 20px; }
+  .view-vehicles.view-display-id-block_1 .item-list:last-child {
+    margin-bottom: 0; }
+  .view-vehicles.view-display-id-block_1 .item-list ul {
+    padding-left: 0; }
+    .view-vehicles.view-display-id-block_1 .item-list ul li {
+      list-style: none; }
+
 
 .ui-autocomplete {
   background: #fff;
@@ -6790,6 +6810,8 @@ ol, ul {
   padding-left: 1.5em; }
   .popover ol:last-child, .popover ul:last-child {
     margin-bottom: 0; }
+  ol:last-child, ul:last-child {
+    margin-bottom: 0; }
 
 .page-header {
   margin: 20px 0 30px;
@@ -6798,9 +6820,19 @@ ol, ul {
 .panel-heading {
   margin: 0; }
 
+.panel-default h1, .panel-default h2, .panel-default h3, .panel-default h4, .panel-default h5, .panel-default h6 {
+  margin-top: 0; }
+
 .panel-default .panel-heading {
   background-color: #f5f5f5;
   border-color: #ddd; }
+  .panel-default .panel-heading h1, .panel-default .panel-heading h2, .panel-default .panel-heading h3, .panel-default .panel-heading h4, .panel-default .panel-heading h5, .panel-default .panel-heading h6 {
+    margin-bottom: 0; }
+
+.panel-body .panel-footer {
+  margin-bottom: -15px;
+  margin-left: -15px;
+  margin-right: -15px; }
 
 h1.page-header {
   text-transform: capitalize; }
